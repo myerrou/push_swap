@@ -6,13 +6,14 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:27 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:10:28 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:42:54 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// These functions calculate the required amount of rotation.
+// Same as solv_0 the only diffrence is "index"
+// can be ft_track_a or ft_i_fetch
 int	ft_rarb_sola(t_stack *a, t_stack *b, int c)
 {
 	int	i;

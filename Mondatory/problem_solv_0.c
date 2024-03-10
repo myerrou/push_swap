@@ -6,18 +6,19 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:24 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:10:25 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:41:37 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// These functions calculate how many times 
-// we should rotate the stacks together.
-// Because after a certain amoun of rotate, we will proceed only with one stack
+// These functions calculate times 
+// we should rotate the stacks .
+// Because after some rotates, we will proceed only with one
 // rotation. Since here we have reverse rotate,rather than index number,
 // we check reverse index number which is 
-// calculated by list_size - index_number.
+// calculated by ft_stack_size - "index".
+// "index" can be ft_track_b or ft_i_fetch
 int	ft_rarb_solb(t_stack *s_a, t_stack *s_b, int c)
 {
 	int	i;

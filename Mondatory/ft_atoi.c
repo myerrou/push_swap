@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 14:18:54 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/08 09:59:09 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:34:11 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,26 +45,3 @@ int	ft_atoi(const char *str)
 	nb = 0;
 	return (checker((char *)str, s, nb));
 }
-/*
-int	main(void)
-{
-	const char *str1 = "-1"; // Invalid Input
-	const char *str2 = "   --++--54321";  // invalid input
-	const char *str3 = "-123456hhsg";
-
-	int result1 = ft_atoi(str1);
-	int result2 = ft_atoi(str2);
-	int result3 = ft_atoi(str3);
-
-	printf("Result 1: %d\n", result1);
-	printf("Result 2: %d\n", result2);
-	printf("Result 3: %d\n\n\n\n", result3);
-
-	int resul1 = atoi(str1);
-	int resul2 = atoi(str2);
-	int resul3 = atoi(str3);
-
-	printf("Result 1: %d\n", resul1);
-	printf("Result 2: %d\n", resul2);
-	printf("Result 3: %d\n", resul3);
-}*/

@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:30 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:10:31 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:43:03 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ int					ft_stack_size(t_stack *stack);
 int					ft_dupli_check(t_stack *s_a);
 int					ft_atoi(const char *str);
 int					ft_atoya(const char *s);
-// int	check_args(char **argv);
 int					ft_sorted(t_stack *s_a);
 int					ft_min(t_stack *s_a);
 int					ft_max(t_stack *s_a);

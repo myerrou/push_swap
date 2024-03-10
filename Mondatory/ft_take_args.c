@@ -6,18 +6,13 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:11 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:10:12 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:38:45 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// This function does three things.
-// 1. It checks if the number of input is less than 2.
-// 2. It checks if the number of input is equal to 2.
-//    If it is, it means it is a quoted string.
-// 3. It checks if the number of input is greater than 2.
-//     If it is, it lists the arguements.
+// This Function is a custom atoi .
 int	ft_atoya(const char *s)
 {
 	int				mod;
@@ -47,13 +42,6 @@ int	ft_atoya(const char *s)
 	return (mod * i);
 }
 
-// This function does three things.
-// 1. It checks if the number of input is less than 2.
-// 2. It checks if the number of input is equal to 2.
-//    If it is, it means it is a quoted string. Call
-//		another function. <ft_split>
-// 3. It checks if the number of input is greater than 2.
-//     If it is, it lists the arguements.
 t_stack	*ft_take_args(int argc, char **argv)
 {
 	t_stack	*s_a;

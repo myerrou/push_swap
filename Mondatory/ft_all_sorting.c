@@ -6,13 +6,13 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:09:47 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:09:48 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:33:59 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// This function sort and push stacks until 3 members left.
+// This function sort and push to stacks till 3 numbers left.
 void	ft_b3_sorting(t_stack **s_a, t_stack **s_b)
 {
 	int		i;
@@ -39,11 +39,10 @@ void	ft_b3_sorting(t_stack **s_a, t_stack **s_b)
 }
 
 // This function one by one pushes all the elements
-// in s_a to the s_b, until only three elements
-// are left in s_a. While pushing, it makes sure if
-// the s_b is sorted. When three elements are left,
-// it calls the ft_3_sort function to sort left over
-// elements in s_a.
+// in s_a to s_b, until only three elements
+// are left in s_a. It makes sure if
+// s_b is sorted. When three elements are left,
+// it calls the ft_3_sort function to sort what's left.
 t_stack	*s_b_sort(t_stack **s_a)
 {
 	t_stack	*s_b;
@@ -60,8 +59,7 @@ t_stack	*s_b_sort(t_stack **s_a)
 	return (s_b);
 }
 
-// This function is pushing back the elements from s_b
-// to s_a until s_b is empty.
+// if s_b not empty This function is pushing from s_b to s_a.
 t_stack	**s_a_sort(t_stack **s_a, t_stack **s_b)
 {
 	int		i;
@@ -88,14 +86,14 @@ t_stack	**s_a_sort(t_stack **s_a, t_stack **s_b)
 	return (s_a);
 }
 
-// This function sorts the s_a if there are more
-// than 2 elements in the s_a.
+// This function sorts s_a if there are more
+// than 2 elements in s_a.
 // And finally it makes final sort in s_a after
 // all values pushed to s_b, sorted and pushed
-// back to s_a. Because, even the s_a is
+// back to s_a. Because, s_a is
 // sorted at the end, the minimum number have to
-// at the top of the s_a. So, it simply brings
-// the smallest number of the s_a to the top.
+// be at the top of s_a. it simply brings
+// the smallest number in s_a to the top.
 void	ft_all_sort(t_stack **s_a)
 {
 	t_stack	*s_b;
@@ -122,6 +120,7 @@ void	ft_all_sort(t_stack **s_a)
 	}
 }
 
+// do the sorting while 3 elements in stack.
 void	ft_3_sort(t_stack **s_a)
 {
 	if (ft_min(*s_a) == (*s_a)->data)

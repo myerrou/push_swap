@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:06:06 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/08 10:00:04 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:36:39 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,11 +84,3 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	return (sub);
 }
-/*
-int	main(void)
-{
-	char *str = NULL;
-	char c = 0;
-	char **res = ft_split(str, c);
-	printf("%s\n", (char *)res);
-}*/

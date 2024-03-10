@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:37 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:10:38 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:43:59 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	ft_max(t_stack *s_a)
 	return (i);
 }
 
+// calculate the size of the stack
 int	ft_stack_size(t_stack *stack)
 {
 	size_t	i;
@@ -53,6 +54,7 @@ int	ft_stack_size(t_stack *stack)
 	return (i);
 }
 
+// go to the last node in the stack
 t_stack	*ft_stack_end(t_stack *stack)
 {
 	if (!stack)

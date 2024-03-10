@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:14:20 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/08 10:00:04 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:36:27 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(sub, (char *)s + start, len + 1);
 	return (sub);
 }
-/*
-int	main(void)
-{
-	const char	*original = "Hello, World!";
-	unsigned int start_index = 7;  // Start index of the substring
-	int substring_length = 5;  // Length of the substring
-
-	char* sub = ft_substr(original, start_index, substring_length);
-
-	if (sub != NULL) {
-		printf("Original: %s\n", original);
-		printf("Substring: %s\n", sub);
-		free(sub);
-	} else {
-		printf("Invalid input parameters.\n");
-	}
-
-	return (0);
-}*/

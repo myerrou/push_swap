@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:09:52 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:09:53 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:34:24 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	space(int c)
 	return (0);
 }
 
-//function to check if given arguments is valid
+//function to check if arguments are valid
 int	y_erro_check(char **argv, int i, int j)
 {
 	while (argv[i])

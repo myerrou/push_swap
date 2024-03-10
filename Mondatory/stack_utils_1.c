@@ -6,12 +6,13 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:40 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:10:41 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:46:38 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// find the index to help the tracking of the correct number place. 
 int	ft_i_fetch(t_stack *a, int data)
 {
 	int	i;
@@ -25,7 +26,7 @@ int	ft_i_fetch(t_stack *a, int data)
 	return (i);
 }
 
-// This function finds the correct place of the number in s_a.
+// These two functions below find the correct number place in stack.
 int	ft_track_a(t_stack *s_a, int nbr)
 {
 	int		i;
@@ -49,7 +50,6 @@ int	ft_track_a(t_stack *s_a, int nbr)
 	return (i);
 }
 
-// This function finds the correct place of the number in s_b.
 int	ft_track_b(t_stack *s_b, int nbr)
 {
 	int		i;

@@ -6,14 +6,14 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:09:32 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:09:33 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/10 10:51:29 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Mondatory/push_swap.h"
 
-// This function checks the validity of the commands and stack.
-// If it is valid, and the stack_a is sorted, the program prints "OK".
+// This function checks if commands and stack are valid.
+// If yes and stack is sorted, print "OK" else "KO".
 void	ft_check_0(t_stack **s_a, t_stack **s_b, char *move)
 {
 	char	*temp;
@@ -33,8 +33,8 @@ void	ft_check_0(t_stack **s_a, t_stack **s_b, char *move)
 	free(move);
 }
 
-// This function reads the move and checks if the command is valid.
-// If it is, it executes the command.
+// This function reads the moves and checks if command are valid.
+// If yes, executes the command.
 char	*ft_check_1(t_stack **s_a, t_stack **s_b, char *move)
 {
 	if (move[0] == 's' && move[1] == 'a' && move[2] == '\n')
