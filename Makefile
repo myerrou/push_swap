@@ -44,8 +44,7 @@ fclean: clean
 
 re: clean all
 
-build: all bonus
-	make clean
+build: all bonus clean
 	clear
 
 .PHONY: all clean fclean re bonus
