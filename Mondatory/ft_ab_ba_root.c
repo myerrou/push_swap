@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:09:43 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/10 10:28:45 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/11 07:17:02 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 // These functions calculate which rotation
 // combination is best sort the stack. Of
 // course, after rotation there is always one push
-// operation is left to do which .
-
+// operation is left to do.
 int	ft_ab_root(t_stack *s_a, t_stack *s_b)
 {
 	int		i;
