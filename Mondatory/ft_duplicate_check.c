@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:09:55 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/11 07:17:10 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/13 10:08:42 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	ft_dupli_check(t_stack *s_a)
 {
 	t_stack	*temp;
-	
+
 	while (s_a)
 	{
 		temp = s_a->next;
@@ -34,6 +34,5 @@ int	ft_dupli_check(t_stack *s_a)
 void	ft_errno_mess(void)
 {
 	write(2, "Error\n", 6);
-	// system("leaks push_swap");
 	exit(1);
 }

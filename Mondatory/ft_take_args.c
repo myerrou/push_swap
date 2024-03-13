@@ -6,7 +6,7 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:11 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/11 08:31:37 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/13 10:06:03 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,7 @@ int	ft_atoya(char ***temp, const char *s, int mod)
 		s++;
 	}
 	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
-	{
 		ft_fire(temp);
-	}
 	return (mod * i);
 }
 
@@ -95,7 +93,7 @@ int	check_args(char **argv, int i)
 	int	j;
 
 	j = 0;
-	while((argv[i][j]))
+	while ((argv[i][j]))
 	{
 		if (digit(argv[i][j]))
 		{

@@ -6,13 +6,13 @@
 /*   By: myerrou <myerrou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 10:10:40 by myerrou           #+#    #+#             */
-/*   Updated: 2024/03/11 07:17:21 by myerrou          ###   ########.fr       */
+/*   Updated: 2024/03/13 09:39:03 by myerrou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// find the index to help the tracking of the correct number place. 
+// find the index to help the tracking of the correct number place.
 int	ft_i_fetch(t_stack *a, int data)
 {
 	int	i;
