@@ -1,10 +1,10 @@
 NAME = push_swap
 
-CC = gcc
+CC = gcc 
 
 RM = rm -rf
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 
 BONUS = checker
 
@@ -24,13 +24,13 @@ OBJ = ${SRC2:.c=.o}
 BONUS_OBJ =${BONUS_SRC:.c=.o}
 
 .c.o:
-	${CC} -c $< -o ${<:.c=.o}
+	${CC} $(CFLAGS)-c $< -o ${<:.c=.o}
 
 ${NAME}: ${MAIN} ${OBJ}
-	${CC} ${FLAGS} ${MAIN} ${OBJ} -o ${NAME} 
+	${CC} ${CFLAGS} ${MAIN} ${OBJ} -o ${NAME} 
 
 ${BONUS}: ${OBJ} ${BONUS_OBJ} 
-	${CC} ${FLAGS} ${BONUS_OBJ} ${OBJ} -o ${BONUS}
+	${CC} ${CFLAGS} ${BONUS_OBJ} ${OBJ} -o ${BONUS}
 
 all: ${NAME}
 

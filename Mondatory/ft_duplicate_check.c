@@ -34,5 +34,6 @@ int	ft_dupli_check(t_stack *s_a)
 void	ft_errno_mess(void)
 {
 	write(2, "Error\n", 6);
+	// system("leaks push_swap");
 	exit(1);
 }

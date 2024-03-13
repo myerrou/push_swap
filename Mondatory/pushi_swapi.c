@@ -15,8 +15,6 @@
 int	main(int argc, char **argv)
 {
 	t_stack	*s_a;
-	char	**x;
-	int		i;
 
 	if (argc > 1)
 	{

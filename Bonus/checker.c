@@ -56,7 +56,10 @@ char	*ft_check_1(t_stack **s_a, t_stack **s_b, char *move)
 	else if (move[0] == 'r' && move[1] == 'r' && move[3] == '\n')
 		ft_check_2(s_a, s_b, move);
 	else
+	{
+		free(move);
 		ft_errno_mess();
+	}
 	return (get_next_line(0));
 }
 
@@ -68,6 +71,11 @@ void	ft_check_2(t_stack **s_a, t_stack **s_b, char *move)
 		ft_rrb(s_b, 1);
 	else if (move[2] == 'r')
 		ft_rrr_0(s_a, s_b, 1);
+	else
+	{
+		free(move);
+		ft_errno_mess();
+	}
 }
 
 int	main(int argc, char **argv)

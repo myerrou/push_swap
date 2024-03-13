@@ -46,13 +46,15 @@ void	ft_rr(t_stack **s_a, t_stack **s_b, int x)
 {
 	t_stack	*temp;
 
-	if (!*s_a || !((*s_a)->next) || !*s_b || !((*s_b)->next))
+	if (!*s_a || !((*s_a)->next))
 		return ;
 	temp = *s_a;
 	*s_a = ft_stack_end(*s_a);
 	(*s_a)->next = temp;
 	*s_a = temp->next;
 	temp->next = NULL;
+	if (!*s_b || !((*s_b)->next))
+		return ;
 	temp = *s_b;
 	*s_b = ft_stack_end(*s_b);
 	(*s_b)->next = temp;
@@ -66,12 +68,14 @@ void	ft_ss(t_stack **s_a, t_stack **s_b, int x)
 {
 	t_stack	*temp;
 
-	if (!*s_a || !((*s_a)->next) || !*s_b || !((*s_b)->next))
+	if (!*s_a || !((*s_a)->next))
 		return ;
 	temp = *s_a;
 	*s_a = (*s_a)->next;
 	temp->next = (*s_a)->next;
 	(*s_a)->next = temp;
+	if (!*s_b || !((*s_b)->next))
+		return ;
 	temp = *s_b;
 	*s_b = (*s_b)->next;
 	temp->next = (*s_b)->next;

@@ -67,7 +67,7 @@ void	ft_rrr_0(t_stack **s_a, t_stack **s_b, int x)
 	t_stack	*temp;
 	int		i;
 
-	if (!*s_a || !((*s_a)->next) || !*s_b || !((*s_b)->next))
+	if (!*s_a || !((*s_a)->next))
 		return ;
 	i = 0;
 	temp = *s_a;
@@ -91,6 +91,8 @@ void	ft_rrr_1(t_stack **s_b, int x)
 	t_stack	*temp;
 	int		i;
 
+	if (!*s_b || !((*s_b)->next))
+		return ;
 	i = 0;
 	temp = *s_b;
 	while ((*s_b)->next)

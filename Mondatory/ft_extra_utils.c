@@ -59,7 +59,10 @@ t_stack	*ft_node(int nbr)
 
 	new = malloc(sizeof(t_stack));
 	if (!new)
+	{
+		ft_free(&new);
 		ft_errno_mess();
+	}
 	new->data = nbr;
 	new->next = NULL;
 	return (new);

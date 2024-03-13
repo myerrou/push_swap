@@ -13,15 +13,12 @@
 #include "push_swap.h"
 
 // This Function is a custom atoi .
-int	ft_atoya(const char *s)
+int	ft_atoya(char ***temp, const char *s, int mod)
 {
-	int				mod;
 	long long int	i;
 
 	i = 0;
-	mod = 1;
-	while (*s == ' ' || *s == '\t' || *s == '\n' || *s == '\f' || *s == '\v'
-		|| *s == '\r')
+	while (*s == ' ' || *s == '0')
 		s++;
 	if (*s == '-')
 	{
@@ -34,11 +31,13 @@ int	ft_atoya(const char *s)
 	{
 		if (!digit(*s))
 			ft_errno_mess();
-		i = i * 10 + (*s - 48);
+		i = i * 10 + (*s - '0');
 		s++;
 	}
 	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
-		ft_errno_mess();
+	{
+		ft_fire(temp);
+	}
 	return (mod * i);
 }
 
@@ -49,16 +48,17 @@ t_stack	*ft_take_args(int argc, char **argv)
 	char	***temp;
 
 	i = 1;
-	while (i < argc)
-	{
-		if (ft_strlen(argv[i]) == 0)
-			ft_errno_mess();
-		i++;
-	}
 	temp = NULL;
 	s_a = NULL;
 	temp = (char ***)malloc(argc * sizeof(char **));
+	while (i < argc)
+	{
+		if (ft_strlen(argv[i]) == 0 || !check_args(argv, i))
+			ft_errno_mess();
+		i++;
+	}
 	s_a = ft_spliter(argc, argv, s_a, temp);
+	free(temp);
 	return (s_a);
 }
 
@@ -78,12 +78,39 @@ t_stack	*ft_spliter(int argc, char **argv, t_stack *s_a, char ***temp)
 		y = 0;
 		while (temp[x][y])
 		{
-			j = ft_atoya(temp[x][y]);
+			j = ft_atoya(temp, temp[x][y], 1);
+			free(temp[x][y]);
 			ft_back_stack(&s_a, ft_node(j));
 			y++;
 		}
+		free(temp[x]);
 		x++;
 		i++;
 	}
 	return (s_a);
+}
+
+int	check_args(char **argv, int i)
+{
+	int	j;
+
+	j = 0;
+	while((argv[i][j]))
+	{
+		if (digit(argv[i][j]))
+		{
+			return (1);
+			break ;
+		}
+		j++;
+	}
+	return (0);
+}
+
+void	ft_fire(char ***temp)
+{
+	free(**temp);
+	free(*temp);
+	free(temp);
+	ft_errno_mess();
 }
